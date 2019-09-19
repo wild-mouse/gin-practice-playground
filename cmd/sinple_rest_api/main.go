@@ -1,6 +1,7 @@
 package main
 
 import "github.com/gin-gonic/gin"
+import "github.com/wild-mouse/gin-practice-playground/pkg/sample"
 
 func main() {
 	r := gin.Default()
@@ -9,5 +10,7 @@ func main() {
 			"message": "pong",
 		})
 	})
+	r.GET("/hoge", sample.Hoge)
+
 	r.Run()
 }
